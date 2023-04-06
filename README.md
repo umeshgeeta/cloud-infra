@@ -1,7 +1,8 @@
 # cloud-infra
 
 
-A.  Basic Web Server:   BasicWebServerInVPC.template
+A.  Basic Web Server   
+    CloudFormation Template: BasicWebServerInVPC.template
 
     This CloudFormation (Infrastructure as Code) creates a VPC, Subnet and an EC2 instance in running that to serve a 
     basic web page. This is a reference implementation of:
@@ -10,13 +11,14 @@ A.  Basic Web Server:   BasicWebServerInVPC.template
     You need to ensure that EC2 Key pair is created in the appropriate AWS region and referred for SSH access to the host.
     It is supporting HTTP at present.
 
-    The URL to check is: http://3.90.108.39/
+    The URL to check is: http://100.26.226.204/
 
     Next steps to scale this setup, use Load Balancers as explained in:
     https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/working-with-templates-cfn-designer-walkthrough-updatebasicwebserver.html
 
 
-B.  CloudFront based Static Web Page:   HttpsCfnWebServer.template
+B.  CloudFront based Static Web Page
+    CloudFormation Template: HttpsCfnWebServer.template
 
     This is an implementation where we leverage CloudFront CDN of AWS to scale as the load increases. There is no
     EC2 instance deployment, simple a static page on a S3 bucket from where it is picked and rendered. In addition to

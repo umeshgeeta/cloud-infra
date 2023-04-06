@@ -5,7 +5,7 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: your-unique-bucket-name
+      BucketName: arn:aws:s3:::cloud-infra
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index.html
@@ -25,7 +25,7 @@ Resources:
   SSLCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
-      DomainName: your-domain-name
+      DomainName: singlepush.net
       ValidationMethod: DNS
 
   CloudFrontDistribution:
